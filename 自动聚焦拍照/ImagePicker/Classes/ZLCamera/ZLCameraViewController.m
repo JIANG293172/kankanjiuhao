@@ -130,10 +130,9 @@ static CGFloat BOTTOM_HEIGHT = 60;
     caramView.delegate = self;
     [self.view addSubview:caramView];
     [caramView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.offset = viewWidth;
-        make.height.offset = viewHeight;
-        make.left.offset = 0;
-        make.bottom.offset = - BOTTOM_HEIGHT - 15;
+        make.left.right.offset = 0;
+        make.bottom.offset = -60;
+        make.top.offset = 25;
     }];
     [self.view.layer insertSublayer:self.preview atIndex:0];
     self.caramView = caramView;
